@@ -12,7 +12,9 @@ counter = function() {
 };
 
 jQuery(document).ready(function($) {
-	$('textarea').change(counter);
+	$('textarea').change(function() {
+		setTimeout(counter, 0);
+	});
 	$('textarea').keydown(counter);
 	$('textarea').keypress(counter);
 	$('textarea').keyup(counter);
